@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
+    repoURL: https://github.com/sylvain-atanga/argo-cd-project1.git
     targetRevision: HEAD
     path: dev
   destination: 
@@ -16,7 +16,7 @@ spec:
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+    - CreateNamespace=true     #if ns doesnt exist argo creates one
 
     automated:
       selfHeal: true
